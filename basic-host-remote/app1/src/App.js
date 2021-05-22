@@ -1,13 +1,21 @@
 import React from "react";
-
-const RemoteButton = React.lazy(() => import("app2/Button"));
+debugger;
+const RemoteButton = React.lazy(() => {
+  debugger;
+  return new Promise((resolve) => {
+    resolve({
+      default: () => "sss",
+    });
+  });
+  // return import("app2/Button")
+});
 
 const App = () => (
   <div>
     <h1>Basic Host-Remote</h1>
     <h2>App 1</h2>
     <React.Suspense fallback="Loading Button">
-      <RemoteButton />
+      <RemoteButton ll="dd" />
     </React.Suspense>
   </div>
 );
