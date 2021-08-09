@@ -2,12 +2,12 @@ import React from "react";
 debugger;
 const RemoteButton = React.lazy(() => {
   debugger;
-  return new Promise((resolve) => {
-    resolve({
-      default: () => "sss",
-    });
-  });
-  // return import("app2/Button")
+  // return new Promise((resolve) => {
+  //   resolve({
+  //     default: () => "sss",
+  //   });
+  // });
+  return import("app2/Button")
 });
 
 const App = () => (
