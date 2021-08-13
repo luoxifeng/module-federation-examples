@@ -7,7 +7,7 @@ const RemoteButton = React.lazy(() => {
   //     default: () => "sss",
   //   });
   // });
-  return import("app2/Button")
+  return import("app10/Button").then(t => t.ll)
 });
 
 const App = () => (
@@ -15,7 +15,7 @@ const App = () => (
     <h1>Basic Host-Remote</h1>
     <h2>App 1</h2>
     <React.Suspense fallback="Loading Button">
-      <RemoteButton ll="dd" />
+      <RemoteButton ll="d222d" />
     </React.Suspense>
   </div>
 );

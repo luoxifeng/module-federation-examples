@@ -9,9 +9,12 @@ module.exports = {
   devServer: {
     contentBase: path.join(__dirname, "dist"),
     port: 3001,
+    hot: false,
+    writeToDisk: true,
   },
   output: {
-    publicPath: "auto",
+    publicPath: "./",
+    path: path.join(__dirname, "dist")
   },
   module: {
     rules: [
@@ -37,7 +40,7 @@ module.exports = {
     new ModuleFederationPlugin({
       name: "app1",
       remotes: {
-        app2: `app2@${getRemoteEntryUrl(3002)}`,
+        app10: `app2@${getRemoteEntryUrl(3002)}`,
       },
       shared: { react: { singleton: true }, "react-dom": { singleton: true } },
     }),

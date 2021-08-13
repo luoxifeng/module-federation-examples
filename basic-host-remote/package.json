@@ -7,6 +7,7 @@
     ]
   },
   "scripts": {
+    "dev": "lerna run --parallel dev",
     "start": "lerna run --parallel start",
     "build": "lerna run build",
     "serve": "lerna run --parallel serve",
