@@ -1,5 +1,5 @@
 import React from "react";
-debugger;
+
 const RemoteButton = React.lazy(() => {
   debugger;
   // return new Promise((resolve) => {
@@ -7,7 +7,7 @@ const RemoteButton = React.lazy(() => {
   //     default: () => "sss",
   //   });
   // });
-  return import("app10/Button").then(t => t.ll)
+  return import("app10/Button")
 });
 
 const App = () => (
