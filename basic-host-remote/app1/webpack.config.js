@@ -42,8 +42,8 @@ module.exports = {
         app10: `app2@${getRemoteEntryUrl(3002)}`,
       },
       shared: { 
-        react: { singleton: true }, 
-        "react-dom": { singleton: true } 
+        // react: { singleton: true }, 
+        // "react-dom": { singleton: true } 
       },
     }),
     new HtmlWebpackPlugin({
