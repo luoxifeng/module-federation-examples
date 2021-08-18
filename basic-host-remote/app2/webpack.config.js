@@ -15,6 +15,13 @@ module.exports = {
   },
   module: {
     rules: [
+      // {
+      //   test: /bootstrap\.js$/,
+      //   loader: "bundle-loader",
+      //   options: {
+      //     lazy: true,
+      //   },
+      // },
       {
         test: /\.jsx?$/,
         loader: "babel-loader",
@@ -33,7 +40,16 @@ module.exports = {
       exposes: {
         "./Button": "./src/Button",
       },
-      shared: { react: { singleton: true }, "react-dom": { singleton: true } },
+      shared: { 
+        react: { 
+          singleton: true, 
+          eager: true 
+        },
+        "react-dom": { 
+          singleton: true, 
+          eager: true 
+        } 
+      },
     }),
     new HtmlWebpackPlugin({
       template: "./public/index.html",

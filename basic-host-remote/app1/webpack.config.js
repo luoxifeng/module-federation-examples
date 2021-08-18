@@ -38,9 +38,16 @@ module.exports = {
   plugins: [
     new ModuleFederationPlugin({
       name: "app1",
+      // library: {
+      //   type: 'var',
+      //   name: 'app1'
+      // },
       remotes: {
-        app10: `app2@${getRemoteEntryUrl(3002)}`,
+        app2: `app2@${getRemoteEntryUrl(3002)}`,
       },
+      // remotes: {
+      //   app2: 'app2'
+      // },
       shared: { 
         react: { singleton: true }, 
         "react-dom": { singleton: true } 
